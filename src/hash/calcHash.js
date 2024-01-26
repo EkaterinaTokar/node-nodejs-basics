@@ -8,8 +8,9 @@ const calculateHash = async () => {
       new URL("files/fileToCalculateHashFor.txt", import.meta.url)
     )
   );
+  let hash;
   readStream.on("data", (chunk) => {
-    const hash = crypto.createHash("sha256").update(chunk).digest("hex");
+    hash = crypto.createHash("sha256").update(chunk).digest("hex");
   });
   readStream.on("error", (error) => {
     console.log(error);
