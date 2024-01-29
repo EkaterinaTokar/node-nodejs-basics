@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import * as url from "url";
+import * as url from "node:url";
 
 const read = async () => {
   const readStream = fs.createReadStream(

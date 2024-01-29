@@ -1,9 +1,9 @@
 import path from "node:path";
-import { release, version } from "os";
+import { release, version } from "node:os";
 import { createServer as createServerHttp } from "http";
 import "./files/c.js";
-import { fileURLToPath } from "url";
-import fs from "fs/promises";
+import { fileURLToPath } from "node:url";
+import fs from "node:fs/promises";
 
 const random = Math.random();
 

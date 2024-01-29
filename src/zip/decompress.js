@@ -1,7 +1,6 @@
 import zlib from "node:zlib";
-import stream from "node:stream";
 import fs from "node:fs";
-import * as url from "url";
+import * as url from "node:url";
 const decompress = async () => {
   const unzip = zlib.createGunzip();
   const source = fs.createReadStream(

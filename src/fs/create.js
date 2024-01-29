@@ -1,5 +1,5 @@
 import * as fsPromises from "node:fs/promises";
-import * as url from "url";
+import * as url from "node:url";
 
 const data = "I am fresh and young";
 const __dirname = url.fileURLToPath(
@@ -10,8 +10,7 @@ const create = async () => {
   try {
     await fsPromises.writeFile(__dirname, data, { flag: "wx" });
   } catch (error) {
-    console.error(`FS operation failed: ${error}`);
-    throw Error(`FS operation failed`);
+    throw new Error(`Failed to create file: ${error}`);
   }
 };
 

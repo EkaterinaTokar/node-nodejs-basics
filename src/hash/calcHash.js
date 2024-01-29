@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
-import * as url from "url";
+import * as url from "node:url";
 
 const calculateHash = async () => {
   const readStream = fs.createReadStream(

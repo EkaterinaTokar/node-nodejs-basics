@@ -1,5 +1,5 @@
 import * as fsPromises from "node:fs/promises";
-import * as url from "url";
+import * as url from "node:url";
 
 const remove = async () => {
   try {
@@ -7,7 +7,6 @@ const remove = async () => {
       url.fileURLToPath(new URL("files/fileToRemove.txt", import.meta.url))
     );
   } catch (error) {
-    console.error(`FS operation failed: ${error}`);
     throw Error(`FS operation failed`);
   }
 };

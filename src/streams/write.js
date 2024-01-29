@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import * as url from "url";
+import * as url from "node:url";
 
 const write = async () => {
   const writeableStream = fs.createWriteStream(

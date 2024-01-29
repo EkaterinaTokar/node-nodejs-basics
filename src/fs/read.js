@@ -1,5 +1,5 @@
 import * as fsPromises from "node:fs/promises";
-import * as url from "url";
+import * as url from "node:url";
 
 const read = async () => {
   try {
@@ -8,7 +8,6 @@ const read = async () => {
     );
     console.log(fileToRead.toString());
   } catch (error) {
-    console.error(`FS operation failed: ${error}`);
     throw Error(`FS operation failed`);
   }
 };

@@ -1,7 +1,6 @@
 import zlib from "node:zlib";
-import stream from "node:stream";
 import fs from "node:fs";
-import * as url from "url";
+import * as url from "node:url";
 
 async function compress() {
   const gzip = zlib.createGzip();
@@ -12,7 +11,6 @@ async function compress() {
     url.fileURLToPath(new URL("files/archive.gz", import.meta.url))
   );
   source.pipe(gzip).pipe(writeStream);
-  console.log("Zipped Successfully");
 }
 
 await compress();
